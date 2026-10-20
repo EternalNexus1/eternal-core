@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eternal Nexus</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #080808;
+  color: #e9c76b;
+  text-align: center;
+}
+header {
+  padding: 65px 20px;
+  background: linear-gradient(135deg,#111,#33250b,#111);
+}
+h1 { font-size: 38px; }
+p { color: #ddd; }
+.search {
+  margin: 35px auto;
+  display: flex;
+  max-width: 550px;
+  padding: 0 15px;
+}
+input {
+  flex: 1;
+  min-width: 0;
+  padding: 15px;
+  border: 1px solid #d4af37;
+  border-radius: 8px 0 0 8px;
+}
+button {
+  padding: 15px;
+  background: #d4af37;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+}
+section { padding: 35px 20px; }
+.card {
+  padding: 25px;
+  margin: 15px auto;
+  max-width: 550px;
+  border: 1px solid #b89636;
+  border-radius: 14px;
+  background: #151515;
+}
+</style>
+</head>
+<body>
+<header>
+<h1>ETERNAL NEXUS</h1>
+<p>Innovation • Technology • Future</p>
+</header>
+
+<div class="search">
+<input id="search" placeholder="Search the web...">
+<button onclick="searchWeb()">Search</button>
+</div>
+
+<section>
+<h2>Welcome to the Future</h2>
+<div class="card">
+<h3>Software Development</h3>
+<p>Building modern digital experiences.</p>
+</div>
+<div class="card">
+<h3>Artificial Intelligence</h3>
+<p>Exploring intelligent technologies.</p>
+</div>
+<div class="card">
+<h3>Digital Solutions</h3>
+<p>Creating powerful tools for tomorrow.</p>
+</div>
+</section>
+
+<script>
+function searchWeb() {
+  const q = document.getElementById("search").value.trim();
+  if (q) {
+    window.open(
+      "https://www.google.com/search?q=" + encodeURIComponent(q),
+      "_blank"
+    );
+  }
+}
+document.getElementById("search").addEventListener("keydown", e => {
+  if (e.key === "Enter") searchWeb();
+});
+</script>
+</body>
+  </html>
+  
